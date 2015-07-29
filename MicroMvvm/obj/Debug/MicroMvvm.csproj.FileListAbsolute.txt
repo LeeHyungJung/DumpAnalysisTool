@@ -1,0 +1,14 @@
+C:\Users\Administrator\Downloads\MvvmExample\MvvmExample\MicroMvvm\bin\Debug\MicroMvvm.dll
+C:\Users\Administrator\Downloads\MvvmExample\MvvmExample\MicroMvvm\bin\Debug\MicroMvvm.pdb
+C:\Users\Administrator\Downloads\MvvmExample\MvvmExample\MicroMvvm\obj\Debug\MicroMvvm.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Downloads\MvvmExample\MvvmExample\MicroMvvm\obj\Debug\MicroMvvm.dll
+C:\Users\Administrator\Downloads\MvvmExample\MvvmExample\MicroMvvm\obj\Debug\MicroMvvm.pdb
+C:\Users\Administrator\documents\visual studio 2013\Projects\FileDownloader\MicroMvvm\bin\Debug\MicroMvvm.dll
+C:\Users\Administrator\documents\visual studio 2013\Projects\FileDownloader\MicroMvvm\bin\Debug\MicroMvvm.pdb
+C:\Users\Administrator\documents\visual studio 2013\Projects\FileDownloader\MicroMvvm\obj\Debug\MicroMvvm.dll
+C:\Users\Administrator\documents\visual studio 2013\Projects\FileDownloader\MicroMvvm\obj\Debug\MicroMvvm.pdb
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\DumpAnalysisTool\MicroMvvm\bin\Debug\MicroMvvm.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\DumpAnalysisTool\MicroMvvm\bin\Debug\MicroMvvm.pdb
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\DumpAnalysisTool\MicroMvvm\obj\Debug\MicroMvvm.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\DumpAnalysisTool\MicroMvvm\obj\Debug\MicroMvvm.dll
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\DumpAnalysisTool\MicroMvvm\obj\Debug\MicroMvvm.pdb

@@ -1,0 +1,5 @@
+C:\Users\Administrator\documents\visual studio 2013\Projects\DumpAnalysisTool\JoongUtils\obj\Debug\JoongUtils.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\documents\visual studio 2013\Projects\DumpAnalysisTool\JoongUtils\bin\Debug\JoongUtils.dll
+C:\Users\Administrator\documents\visual studio 2013\Projects\DumpAnalysisTool\JoongUtils\bin\Debug\JoongUtils.pdb
+C:\Users\Administrator\documents\visual studio 2013\Projects\DumpAnalysisTool\JoongUtils\obj\Debug\JoongUtils.dll
+C:\Users\Administrator\documents\visual studio 2013\Projects\DumpAnalysisTool\JoongUtils\obj\Debug\JoongUtils.pdb

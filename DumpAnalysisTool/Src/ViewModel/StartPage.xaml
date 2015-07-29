@@ -1,0 +1,34 @@
+﻿<parent:BasePage  x:Class="DumpAnalysisTool.Src.ViewModel.StartPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:parent="clr-namespace:DumpAnalysisTool.Src.Page"
+      xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+      mc:Ignorable="d" 
+      d:DesignHeight="480" d:DesignWidth="680"
+	Title="StartPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Rectangle Grid.Column="0" Name="test">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.8,1" StartPoint="0.8,0">
+                    <GradientStop Color="White" Offset="0" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Button Content="START" HorizontalAlignment="Center" VerticalAlignment="Top" Width="228" Grid.Column="0" Grid.Row="0" Margin="226,320,226,0" Click="One_Button_Click" Height="60" Background="Transparent"/>
+        <Label Content="DumpAnalysisTool" HorizontalAlignment="Center" Margin="178,62,176,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" Width="326"/>
+        <CheckBox IsChecked="{Binding IsCheckedDownload}" Content="Download" HorizontalAlignment="Center" Margin="298,212,300,0" VerticalAlignment="Top" Width="82"/>
+        <CheckBox IsChecked="{Binding IsCheckedAnalysis}" Content="Analysis" HorizontalAlignment="Center" Margin="298,235,316,0" VerticalAlignment="Top"/>
+        <CheckBox IsChecked="{Binding IsCheckedStatistic}" Content="Statistic" HorizontalAlignment="Center" Margin="298,258,317,0" VerticalAlignment="Top"/>
+    </Grid>
+</parent:BasePage>

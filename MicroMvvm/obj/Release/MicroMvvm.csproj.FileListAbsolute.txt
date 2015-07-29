@@ -1,0 +1,4 @@
+C:\Users\Administrator\documents\visual studio 2013\Projects\FileDownloader\MicroMvvm\bin\Release\MicroMvvm.dll
+C:\Users\Administrator\documents\visual studio 2013\Projects\FileDownloader\MicroMvvm\bin\Release\MicroMvvm.pdb
+C:\Users\Administrator\documents\visual studio 2013\Projects\FileDownloader\MicroMvvm\obj\Release\MicroMvvm.dll
+C:\Users\Administrator\documents\visual studio 2013\Projects\FileDownloader\MicroMvvm\obj\Release\MicroMvvm.pdb

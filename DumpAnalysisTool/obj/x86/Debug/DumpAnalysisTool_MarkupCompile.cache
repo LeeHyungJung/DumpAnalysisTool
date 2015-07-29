@@ -1,0 +1,20 @@
+﻿DumpAnalysisTool
+
+
+winexe
+C#
+.cs
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\DumpAnalysisTool\DumpAnalysisTool\obj\x86\Debug\
+DumpAnalysisTool
+none
+false
+DEBUG;TRACE
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\DumpAnalysisTool\DumpAnalysisTool\App.xaml
+8-1710726251
+
+33-1604944357
+19253214338
+MainWindow.xaml;Resources\Icons.xaml;Src\Control\StartControlGroup.xaml;Src\ViewModel\AnalysisPage.xaml;Src\ViewModel\DownloadPage.xaml;Src\ViewModel\ProgressPage.xaml;Src\ViewModel\StartPage.xaml;Src\ViewModel\StatisticPage.xaml;
+
+False
+

@@ -1,0 +1,23 @@
+﻿빌드 시작: 2015-01-25 오후 4:52:50
+     1>2 노드의 "C:\Users\Administrator\documents\visual studio 2013\Projects\DumpAnalysisTool\DumpReaderDLL\DumpReaderDLL.vcxproj" 프로젝트(Build 대상)입니다.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W1 /WX- /O2 /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt dllmain.cpp DumpReaderDLL.cpp Source\DumpFile.cpp stdafx.cpp Symbols.cpp ToolCallStack.cpp ToolInfo.cpp Utility.cpp
+         dllmain.cpp
+         DumpReaderDLL.cpp
+     1>c:\users\administrator\documents\visual studio 2013\projects\dumpanalysistool\dumpreaderdll\Symbols.h(3): fatal error C1083: 포함 파일을 열 수 없습니다. 'DumpFile.h': No such file or directory
+         DumpFile.cpp
+     1>Source\DumpFile.cpp(1): fatal error C1083: 포함 파일을 열 수 없습니다. 'stdafx.h': No such file or directory
+         stdafx.cpp
+         Symbols.cpp
+     1>c:\users\administrator\documents\visual studio 2013\projects\dumpanalysistool\dumpreaderdll\Symbols.h(3): fatal error C1083: 포함 파일을 열 수 없습니다. 'DumpFile.h': No such file or directory
+         ToolCallStack.cpp
+     1>c:\users\administrator\documents\visual studio 2013\projects\dumpanalysistool\dumpreaderdll\Symbols.h(3): fatal error C1083: 포함 파일을 열 수 없습니다. 'DumpFile.h': No such file or directory
+         ToolInfo.cpp
+     1>ToolInfo.cpp(3): fatal error C1083: 포함 파일을 열 수 없습니다. 'DumpFile.h': No such file or directory
+         Utility.cpp
+         코드를 생성하고 있습니다...
+     1>"C:\Users\Administrator\documents\visual studio 2013\Projects\DumpAnalysisTool\DumpReaderDLL\DumpReaderDLL.vcxproj" 프로젝트를 빌드했습니다(Build 대상). - 실패
+
+빌드하지 못했습니다.
+
+경과 시간: 00:00:04.36
