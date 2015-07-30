@@ -40,7 +40,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Worker\ITask.cs" />
     <Compile Include="Worker\MsgBaseBackgroundWorker.cs" />
+    <Compile Include="Worker\TaskGroup.cs" />
+    <Compile Include="Worker\TaskManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
