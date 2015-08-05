@@ -5,12 +5,12 @@ using System.Text;
 using System.ComponentModel;
 using System.Collections.Concurrent;
 
-namespace JoongUtils.Worker
+namespace JoongUtils.Task
 {
     /// <summary>
     /// 시퀀스가 있는 일을 수행하기 위한 스레드 INPUT_MSG 가 처리되어 OUTPUT_DATA 로 나온다.
     /// </summary> 
-    public class MsgBaseBackgroundWorker<INPUT_MSG, OUTPUT_DATA> : ITask
+    public class MsgBaseBackgroundWorker<INPUT_MSG, OUTPUT_DATA>
     {
         public delegate void DelegateProgressChanged(object sender, ProgressChangedEventArgs e);
         public delegate void DelegateRunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e);
