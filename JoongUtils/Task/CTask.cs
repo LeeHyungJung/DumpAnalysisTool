@@ -4,31 +4,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
-using System.Collections.Concurrent;
 
 namespace JoongUtils.Task
 {
-    public class TaskEntry : ITaskEntry
+    class CTask : ITask
     {
-        #region member
-        List<ITask> m_TaskList;
+        #region Members
+        BackgroundWorker m_backgroundWorker;
 
-        ITaskEntry m_NextEntry;
-
-        ConcurrentQueue<object> m_contentsQue;
+        string m_name;
         #endregion
-        #region construrct
-        public TaskEntry()
+
+        #region Constructor
+        public CTask(string name)
         {
-            m_TaskList = new List<ITask>();
+            m_name = name;
 
-            m_contentsQue = new ConcurrentQueue<object>();
-
-            m_NextEntry = null;
-
-            getInputDesc = null;
+            m_backgroundWorker = new BackgroundWorker();
+            m_backgroundWorker.WorkerSupportsCancellation = true;
+            m_backgroundWorker.DoWork += Work;
+            m_backgroundWorker.RunWorkerCompleted += runWorkerCompleted;
+            m_backgroundWorker.ProgressChanged += new ProgressChangedEventHandler(progressChanged);
         }
         #endregion
+
         #region event
 
         object objectLock = new Object();
@@ -134,100 +133,45 @@ namespace JoongUtils.Task
         }
         #endregion
 
-        public void Push(object obj)
-        {
-            m_contentsQue.Enqueue(obj);
-        }
-
-        public object Pop()
-        {
-            object obj = null;
-
-            if(m_contentsQue.TryDequeue(out obj) == false)
-            {
-
-            }
-
-            return obj;
-        }
-
         public bool IsBusy()
         {
-            bool isBusy = false;
-
-            foreach (ITask task in m_TaskList)
-            {
-                isBusy = isBusy || task.IsBusy();
-            }
-
-            return isBusy;
+            return m_backgroundWorker.IsBusy;
         }
 
-        public ITaskEntry Next()
+        public void Run()
         {
-            return m_NextEntry;
+            m_backgroundWorker.RunWorkerAsync();
         }
 
-        public void SetNextEntry(ITaskEntry taskEntry)
+        public void Cancle()
         {
-            m_NextEntry = taskEntry;
+            m_backgroundWorker.CancelAsync(); 
         }
 
-        public void AddTask(ITask task)
+        public virtual void Work(object sender, DoWorkEventArgs e)
         {
-            m_TaskList.Add(task);
-            task.GetInputDesc       += Pop;
-            task.TaskEnd            += OnTaskEnd;
-            task.TaskProgressChange += OnTaskProgressChange;
-            task.TaskOutputPush     += OnTaskOutputPush;
+
         }
 
-        protected void OnTaskProgressChange(object sender, ProgressChangedEventArgs e)
+        private void runWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            if(taskProgressChange != null)
+           if(taskEnd != null)
+           {
+               taskEnd(sender, e);
+           }
+        }
+
+        private void progressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            if (taskProgressChange != null)
             {
                 taskProgressChange(sender, e);
             }
         }
 
-        protected void OnTaskEnd(object sender, RunWorkerCompletedEventArgs e)
+        protected void ReportProgress(object desc, int progress)
         {
-            if(IsBusy())
-            {
-                if (taskEnd != null)
-                {
-                    taskEnd(sender, e);
-                }
-            }
-        }
-
-        protected void OnTaskOutputPush(object obj)
-        {
-            if(m_NextEntry != null)
-            {
-                m_NextEntry.Push(obj);
-            }
-
-            if (taskPushOutput != null)
-            {
-                taskPushOutput(obj);
-            }
-        }
-
-        public void Run()
-        {
-            foreach(ITask task in m_TaskList)
-            {
-                task.Run();
-            }
-        }
-
-        public void Cancle()
-        {
-            foreach (ITask task in m_TaskList)
-            {
-                task.Cancle();
-            }
+            m_backgroundWorker.ReportProgress(progress, (object)desc);
         }
     }
 }
